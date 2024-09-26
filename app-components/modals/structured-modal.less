@@ -6,6 +6,10 @@ dialog.modal.structured-modal {
     flex-shrink: 0;
     padding    : 34px;
     font-size  : 26px;
+
+    @container (width <=@phone-width) {
+      font-size: 22px;
+    }
   }
 
   >main {
