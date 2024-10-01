@@ -5,30 +5,6 @@
     }
   }
 
-  >main {
-    display       : flex;
-    flex-direction: column;
-    gap           : 32px;
-
-    @container (width <=@phone-width) {
-      padding: 0 24px !important;
-    }
-
-    >section {
-      display       : flex;
-      flex-direction: column;
-      gap           : 16px;
-
-      >h2 {
-        font-size: 22px;
-
-        @container (width <=@phone-width) {
-          font-size: 18px;
-        }
-      }
-    }
-  }
-
   >footer {
     @container (width <=@phone-width) {
       padding: 24px !important;
