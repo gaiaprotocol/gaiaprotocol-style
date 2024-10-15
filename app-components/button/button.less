@@ -16,7 +16,7 @@ button {
     padding: 8px 16px;
   }
 
-  >.icon {
+  >.icon-container {
     flex-shrink    : 0;
     display        : flex;
     align-items    : center;
@@ -25,7 +25,7 @@ button {
     width : 36px;
     height: 36px;
 
-    >img {
+    >img.icon {
       width        : 36px;
       height       : 36px;
       border-radius: 50%;
@@ -84,5 +84,10 @@ button {
       border-color    : var(--outlined-button-hover-border-color);
       background-color: var(--outlined-button-hover-bg-color);
     }
+  }
+
+  &.circle {
+    padding      : 8px;
+    border-radius: 50%;
   }
 }
