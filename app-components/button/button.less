@@ -34,7 +34,6 @@ button {
 
   &.disabled {
     cursor: not-allowed;
-    filter: grayscale(1);
   }
 
   &.text {
@@ -50,6 +49,10 @@ button {
     &:active:not(.disabled) {
       background-color: var(--text-button-hover-bg-color);
     }
+
+    &.disabled {
+      color: var(--text-button-disabled-text-color);
+    }
   }
 
   &.contained {
@@ -64,6 +67,10 @@ button {
 
     &:active {
       background-color: var(--contained-button-hover-bg-color);
+    }
+
+    &.disabled {
+      background-color: var(--contained-button-disabled-bg-color);
     }
   }
 
@@ -84,10 +91,31 @@ button {
       border-color    : var(--outlined-button-hover-border-color);
       background-color: var(--outlined-button-hover-bg-color);
     }
+
+    &.disabled {
+      background-color: var(--outlined-button-disabled-bg-color);
+    }
   }
 
   &.circle {
     padding      : 8px;
     border-radius: 50%;
+
+    background-color: var(--circle-button-bg-color);
+    color           : var(--circle-button-text-color);
+
+    @media (pointer: fine) {
+      &:hover {
+        background-color: var(--circle-button-hover-bg-color);
+      }
+    }
+
+    &:active {
+      background-color: var(--circle-button-hover-bg-color);
+    }
+
+    &.disabled {
+      background-color: var(--circle-button-disabled-bg-color);
+    }
   }
 }
