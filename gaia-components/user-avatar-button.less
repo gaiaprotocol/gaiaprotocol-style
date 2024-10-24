@@ -1,0 +1,19 @@
+.user-avatar-button {
+  >button.circle {
+    min-height      : auto;
+    padding         : 0;
+    border          : none;
+    background-color: transparent;
+    transition      : none;
+
+    @media (pointer: fine) {
+      &:hover {
+        background-color: var(--circle-button-bg-color);
+      }
+    }
+
+    &:active {
+      background-color: var(--circle-button-bg-color);
+    }
+  }
+}
