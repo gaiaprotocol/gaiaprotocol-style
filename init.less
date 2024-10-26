@@ -11,15 +11,27 @@
 body {
   color      : var(--paragraph-text-color);
   font-family: Söhne;
-  font-size  : 16px;
+  font-size  : 18px;
 
   font-smoothing        : antialiased;
   -webkit-font-smoothing: antialiased;
+
+  container-type: inline-size;
 }
 
 p {
   line-height: 1.5;
   word-break : break-word;
+
+  >a {
+    text-decoration      : underline;
+    text-decoration-color: var(--link-underline-color);
+    transition           : text-decoration-color 0.25s ease;
+
+    &:hover {
+      text-decoration-color: currentColor;
+    }
+  }
 }
 
 a {
