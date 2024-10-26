@@ -9,6 +9,7 @@ dialog.modal.structured-modal {
 
     @container (width <=@phone-width) {
       font-size: 22px;
+      padding  : 34px 24px;
     }
   }
 
@@ -16,11 +17,19 @@ dialog.modal.structured-modal {
     overflow-y: auto;
     flex-grow : 1;
     padding   : 0 34px;
+
+    @container (width <=@phone-width) {
+      padding: 0 24px;
+    }
   }
 
   >footer {
     flex-shrink: 0;
     padding    : 24px 34px;
+
+    @container (width <=@phone-width) {
+      padding: 24px;
+    }
 
     display        : flex;
     align-items    : center;
