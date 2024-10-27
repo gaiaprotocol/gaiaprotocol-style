@@ -12,10 +12,9 @@
     font-size: 15.14px;
   }
 
-  >input {
-    width  : 100%;
-    height : 40px;
-    padding: 0 13.5px;
+  >input,
+  >textarea {
+    width: 100%;
 
     border       : 1px solid var(--input-border-color);
     border-radius: 4.5px;
@@ -27,5 +26,16 @@
     &:hover {
       border-color: var(--input-hover-border-color);
     }
+  }
+
+  >input {
+    height : 40px;
+    padding: 0 13.5px;
+  }
+
+  >textarea {
+    height : 100px;
+    padding: 13.5px;
+    resize : vertical;
   }
 }
