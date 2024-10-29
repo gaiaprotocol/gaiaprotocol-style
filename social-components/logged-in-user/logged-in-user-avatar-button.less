@@ -1,19 +1,29 @@
 .logged-in-user-avatar-button {
-  >button.circle {
-    min-height      : auto;
-    padding         : 0;
-    border          : none;
-    background-color: transparent;
-    transition      : none;
+  >button.avatar {
+    padding   : 0;
+    transition: none;
+    gap       : 12px;
+
+    >.icon-container {
+      border-radius: 50%;
+    }
+
+    >.name {
+      padding-right: 16px;
+    }
 
     @media (pointer: fine) {
       &:hover {
-        background-color: var(--circle-button-bg-color);
+        >.icon-container {
+          background-color: var(--circle-button-bg-color);
+        }
       }
     }
 
     &:active {
-      background-color: var(--circle-button-bg-color);
+      >.icon-container {
+        background-color: var(--circle-button-bg-color);
+      }
     }
   }
 }

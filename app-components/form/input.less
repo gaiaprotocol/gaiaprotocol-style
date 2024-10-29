@@ -1,4 +1,5 @@
 .input {
+  position      : relative;
   display       : flex;
   flex-direction: column;
   gap           : 9px;
@@ -37,5 +38,23 @@
     height : 100px;
     padding: 13.5px;
     resize : vertical;
+  }
+
+  &:has(.suffix-icon) {
+
+    >input,
+    >textarea {
+      padding-right: 40px;
+    }
+  }
+
+  >.suffix-icon {
+    position: absolute;
+    right   : 13.5px;
+    bottom  : 13.5px;
+
+    >.icon {
+      display: flex;
+    }
   }
 }
