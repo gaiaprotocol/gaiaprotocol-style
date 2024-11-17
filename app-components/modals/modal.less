@@ -1,3 +1,26 @@
+.non-modal-dialog-container:has(*) {
+  position: fixed;
+  top     : 0;
+  left    : 0;
+  width   : 100%;
+  height  : 100%;
+  z-index : 999999;
+
+  backdrop-filter : blur(50px);
+  background-color: var(--overlay-color);
+
+  animation: fade-in 0.3s ease-out;
+
+  display        : flex;
+  align-items    : center;
+  justify-content: center;
+
+  >dialog {
+    margin    : 21px auto;
+    max-height: calc(100% - 42px);
+  }
+}
+
 dialog.modal {
   width    : 90%;
   max-width: 600px;
