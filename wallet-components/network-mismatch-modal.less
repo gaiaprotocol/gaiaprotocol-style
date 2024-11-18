@@ -1,0 +1,19 @@
+.network-mismatch-modal {
+  max-width: 760px !important;
+
+  .alert.warning {
+    margin-top: 22px;
+
+    @container (width <=@phone-width) {
+      font-size: 16px;
+    }
+  }
+
+  @container (width <=740px) {
+    >footer:has(>button:nth-child(3)) {
+      flex-direction: column-reverse;
+      align-items   : stretch;
+      gap           : 12px;
+    }
+  }
+}
