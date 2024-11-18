@@ -1,7 +1,13 @@
 .network-mismatch-modal {
   max-width: 760px !important;
 
-  .alert.warning {
+  >header>h1 {
+    display    : flex;
+    align-items: center;
+    gap        : 12px;
+  }
+
+  >main>.alert.warning {
     margin-top: 22px;
 
     @container (width <=@phone-width) {
