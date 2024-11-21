@@ -6,6 +6,8 @@
 
     >.icon-container {
       border-radius: 50%;
+      width        : 32px;
+      height       : 32px;
     }
 
     >.title {
@@ -23,6 +25,22 @@
     &:active {
       >.icon-container {
         background-color: var(--circle-button-bg-color);
+      }
+    }
+
+    &:has(.title:empty) {
+      @media (pointer: fine) {
+        &:hover {
+          >.icon-container {
+            outline: 2px solid var(--circle-button-bg-color);
+          }
+        }
+      }
+
+      &:active {
+        >.icon-container {
+          outline: 2px solid var(--circle-button-bg-color);
+        }
       }
     }
   }
