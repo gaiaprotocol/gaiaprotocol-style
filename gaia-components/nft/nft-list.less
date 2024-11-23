@@ -1,0 +1,9 @@
+.nft-list {
+  display              : grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap                  : 13.5px;
+
+  @container (width < 720px) {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  }
+}
