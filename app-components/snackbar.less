@@ -1,0 +1,26 @@
+.snackbar {
+  position : fixed;
+  left     : 50%;
+  transform: translateX(-50%);
+  bottom   : 20px;
+  z-index  : 999998;
+
+  max-width: 532px;
+  width    : 90%;
+
+  background-color: var(--snackbar-bg-color);
+  color           : var(--snackbar-text-color);
+  border          : 1px solid var(--snackbar-line-color);
+
+  display        : flex;
+  align-items    : center;
+  justify-content: space-between;
+  border-radius  : 24px;
+  padding        : 5px;
+  padding-left   : 25px;
+  gap            : 8px;
+
+  @container (width < @safe-width) {
+    bottom: calc(80px + env(safe-area-inset-bottom));
+  }
+}
