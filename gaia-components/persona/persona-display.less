@@ -1,8 +1,21 @@
 .persona-display {
+  display       : flex;
+  flex-direction: column;
+  gap           : 16px;
+
   >header {
-    display    : flex;
-    align-items: center;
-    gap        : 16px;
+    display: flex;
+    gap    : 16px;
+
+    >.avatar-container {
+      width : 100px;
+      height: 100px;
+
+      @container (width <=@phone-width) {
+        width : 72px;
+        height: 72px;
+      }
+    }
 
     >.content {
       flex-grow     : 1;
@@ -27,6 +40,11 @@
           >.wallet-address {
             font-size: 14px;
           }
+        }
+
+        >.pc-button-container {
+          display: flex;
+          gap    : 8px;
         }
 
         @container (width <=@phone-width) {
