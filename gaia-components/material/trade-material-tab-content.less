@@ -8,21 +8,40 @@
     flex-direction: column;
     gap           : 9px;
 
-    >h3 {
-      font-size : 15.14px;
-      text-align: center;
+    >header {
+      font-size      : 15.14px;
+      display        : flex;
+      justify-content: space-between;
+
+      >.current-balance,
+      >.unit-price {
+        display    : flex;
+        align-items: center;
+        gap        : 8px;
+        color      : var(--secondary-text-color);
+
+        >.balance,
+        >.price {
+
+          >.icon,
+          >.loading-spinner {
+            width : 16px;
+            height: 16px;
+          }
+        }
+      }
+
+      >.recipient-count {
+        color: var(--secondary-text-color);
+      }
     }
   }
 
   >section.amount {
-    >.input {
-      text-align: center;
-
-      >input {
-        text-align   : right;
-        border-radius: 19px;
-        padding      : 0 16px;
-      }
+    >.input>input {
+      text-align   : right;
+      border-radius: 19px;
+      padding      : 0 16px;
     }
   }
 
@@ -40,12 +59,11 @@
         align-items    : center;
         justify-content: space-between;
         padding        : 8px 16px;
-
-        >span.label {
-          font-size: 14px;
-        }
+        font-size      : 14px;
 
         >span.price {
+
+          >.icon,
           >.loading-spinner {
             width : 16px;
             height: 16px;
