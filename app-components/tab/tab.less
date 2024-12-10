@@ -1,0 +1,39 @@
+.tab {
+  display        : flex;
+  align-items    : center;
+  justify-content: center;
+
+  cursor    : pointer;
+  padding   : 8px 22px;
+  min-height: 40px;
+  font-size : 15px;
+  transition: background-color 0.2s linear; //, color 0.2s cubic-bezier(0.6, 0, 0.4, 1);
+
+  border-radius: 9999px;
+
+  @container (width <=@phone-width) {
+    padding: 8px 16px;
+  }
+
+  background-color: transparent;
+  color           : var(--text-button-text-color);
+
+  @media (pointer: fine) {
+    &:hover:not(.disabled):not(.selected) {
+      background-color: var(--text-button-hover-bg-color);
+    }
+  }
+
+  &:active:not(.disabled):not(.selected) {
+    background-color: var(--text-button-hover-bg-color);
+  }
+
+  &.disabled {
+    color: var(--text-button-disabled-text-color);
+  }
+
+  &.selected {
+    //color: var(--contained-button-text-color);
+    mix-blend-mode: difference;
+  }
+}

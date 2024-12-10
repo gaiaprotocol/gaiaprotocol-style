@@ -1,0 +1,15 @@
+.tab-group {
+  position: relative;
+  display : flex;
+
+  >.tab-background {
+    position  : absolute;
+    inset     : 0;
+    background: white;
+    transition: clip-path 0.2s ease-out;
+  }
+
+  >.tab {
+    z-index: 1;
+  }
+}
