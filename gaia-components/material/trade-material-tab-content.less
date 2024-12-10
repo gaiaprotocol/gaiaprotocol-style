@@ -29,6 +29,12 @@
             height: 16px;
           }
         }
+
+        >button {
+          min-height: 20px;
+          padding   : 4px 8px;
+          font-size : 12px;
+        }
       }
 
       >.recipient-count {
@@ -68,6 +74,21 @@
             width : 16px;
             height: 16px;
           }
+        }
+      }
+    }
+  }
+
+  >section.fee-recipients {
+    >.recipients {
+      border       : 1px solid var(--line-color);
+      border-radius: 19px;
+
+      >.fee-recipient-display {
+        padding: 8px 16px;
+
+        &:not(:last-child) {
+          border-bottom: 1px solid var(--line-color);
         }
       }
     }
