@@ -1,15 +1,24 @@
 .trade-material-modal {
-  position: relative;
+  display       : flex;
+  flex-direction: column;
 
   >header {
-    height: 160px;
-  }
+    position   : relative;
+    flex-shrink: 0;
 
-  >main {
+    >.game-banner {
+      height: 160px;
+    }
+
     >.material-icon {
       position: absolute;
       top     : 100px;
       z-index : 1;
+      left    : 34px;
+
+      @container (width <=@phone-width) {
+        left: 24px;
+      }
 
       width        : 80px;
       height       : 80px;
@@ -21,17 +30,37 @@
       background-repeat  : no-repeat;
     }
 
-    padding-top : 40px !important;
+    display       : flex;
+    flex-direction: column;
+    gap           : 16px;
+
+    >.material-name {
+      font-size: 26px;
+      padding  : 24px 34px;
+
+      @container (width <=@phone-width) {
+        font-size: 22px;
+        padding  : 24px 24px;
+      }
+    }
+  }
+
+  >main {
+    overflow-y: auto;
+    flex-grow : 1;
+    padding   : 0 34px 24px 34px;
+
+    @container (width <=@phone-width) {
+      padding: 0 24px 24px 24px;
+    }
 
     display       : flex;
     flex-direction: column;
     gap           : 16px;
 
-    >h2 {
-      font-size: 26px;
-
-      @container (width <=@phone-width) {
-        font-size: 22px;
+    >.tab-content {
+      &.hidden {
+        display: none;
       }
     }
   }
