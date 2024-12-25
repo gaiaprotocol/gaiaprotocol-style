@@ -1,0 +1,24 @@
+li.chat-message-list-item {
+  display       : flex;
+  flex-direction: column;
+
+  >.sender {
+    display    : flex;
+    gap        : 8px;
+    align-items: center;
+
+    >.avatar {
+      width : 32px;
+      height: 32px;
+      cursor: pointer;
+    }
+
+    >.user-name-display {
+      font-size: 14px;
+    }
+  }
+
+  >.chat-content-list {
+    margin-left: 40px;
+  }
+}

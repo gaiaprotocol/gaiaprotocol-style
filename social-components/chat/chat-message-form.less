@@ -1,0 +1,40 @@
+.chat-message-form {
+  padding: 0 16px 8px;
+
+  >form {
+    display    : flex;
+    align-items: center;
+
+    background-color: var(--chat-message-form-bg-color);
+    border-radius   : 26px;
+
+    padding: 6px;
+
+    >.input {
+      flex-grow: 1;
+
+      >input {
+        border: none;
+      }
+    }
+
+    >.button-container {
+      display    : flex;
+      align-items: center;
+      padding    : 4px;
+
+      >button {
+        padding   : 0;
+        width     : 32px;
+        height    : 32px;
+        min-height: auto;
+
+        >.icon-container {
+          >.icon {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
+}
