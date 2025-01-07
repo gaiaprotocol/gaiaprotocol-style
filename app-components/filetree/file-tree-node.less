@@ -2,17 +2,39 @@
   >main {
     display    : flex;
     align-items: center;
-    gap        : 12px;
+    gap        : 8px;
     cursor     : pointer;
+    padding    : 4px 8px;
 
     >.icon-container {
       >img {
         display: block;
       }
     }
+
+    @media (pointer: fine) {
+      &:hover {
+        background-color: var(--file-tree-node-hover-bg-color);
+      }
+    }
+
+    &:active {
+      background-color: var(--file-tree-node-hover-bg-color);
+    }
   }
 
   >.children-container {
+    display    : none;
+    margin-left: 20px;
+  }
+
+  &.expanded {
+    >.children-container {
+      display: block;
+    }
+  }
+
+  >.file-name-input {
     margin-left: 20px;
   }
 }
