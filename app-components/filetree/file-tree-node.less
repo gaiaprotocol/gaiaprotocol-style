@@ -1,4 +1,7 @@
 .file-tree-node {
+  display       : flex;
+  flex-direction: column;
+
   >main {
     display    : flex;
     align-items: center;
@@ -24,13 +27,14 @@
   }
 
   >.children-container {
-    display    : none;
-    margin-left: 20px;
+    display       : none;
+    flex-direction: column;
+    margin-left   : 20px;
   }
 
   &.expanded {
     >.children-container {
-      display: block;
+      display: flex;
     }
   }
 
