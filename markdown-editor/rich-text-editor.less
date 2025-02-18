@@ -1,0 +1,57 @@
+.rich-text-editor-more-menu {
+  >main>.dropdown-menu-group {
+    display              : grid;
+    grid-template-columns: repeat(auto-fill, minmax(48px, 1fr));
+
+    >.dropdown-menu-item {
+      justify-content: center;
+    }
+  }
+}
+
+.rich-text-editor {
+  border       : 1px solid var(--line-color);
+  border-radius: 16px;
+
+  >.toolbar {
+    display        : flex;
+    justify-content: space-between;
+    border-bottom  : 1px solid var(--line-color);
+    padding        : 4px;
+
+    button {
+      background-color: transparent;
+      color           : var(--secondary-text-color);
+
+      @media (pointer: fine) {
+        &:hover {
+          background-color: var(--text-button-hover-bg-color);
+        }
+      }
+
+      &:active {
+        background-color: var(--text-button-hover-bg-color);
+      }
+    }
+
+    >.button-container {
+      flex-grow: 1;
+      display  : flex;
+      gap      : 4px;
+      overflow : hidden;
+    }
+
+    >.more-button {
+      flex-shrink: 0;
+
+      &.hidden {
+        display: none;
+      }
+    }
+  }
+
+  >.editor-area {
+    padding   : 16px;
+    min-height: 200px;
+  }
+}
