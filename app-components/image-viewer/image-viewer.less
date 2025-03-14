@@ -8,7 +8,45 @@
     top     : 0;
     left    : 0;
     right   : 0;
-    z-index : 999999;
+
+    display              : grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items          : center;
+    padding              : 10px 20px;
+
+    >.button-container {
+      display: flex;
+    }
+
+    >.button-container.left {
+      justify-self: start;
+    }
+
+    >.image-counter {
+      justify-self: center;
+    }
+
+    >.button-container.right {
+      justify-self: end;
+    }
+  }
+
+  >button.prev {
+    position : fixed;
+    top      : 50%;
+    left     : 40px;
+    transform: translateY(-50%);
+  }
+
+  >.main-image-viewer {
+    position: fixed;
+  }
+
+  >button.next {
+    position : fixed;
+    top      : 50%;
+    right    : 40px;
+    transform: translateY(-50%);
   }
 
   >.thumbnail-list {
@@ -16,6 +54,5 @@
     bottom  : 0;
     left    : 0;
     right   : 0;
-    z-index : 999999;
   }
 }
