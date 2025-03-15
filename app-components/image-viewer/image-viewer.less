@@ -48,6 +48,12 @@
 
       >.button-container.left {
         justify-self: start;
+
+        @container (width > @phone-width) {
+          >button.share {
+            display: none;
+          }
+        }
       }
 
       >.image-counter {
@@ -57,6 +63,12 @@
 
       >.button-container.right {
         justify-self: end;
+
+        @container (width <=@phone-width) {
+          >button.share {
+            display: none;
+          }
+        }
       }
     }
 
@@ -65,6 +77,10 @@
       top      : 50%;
       left     : 40px;
       transform: translateY(-50%);
+
+      @container (width <=@phone-width) {
+        display: none;
+      }
     }
 
     >.main-image-viewer {
@@ -79,6 +95,10 @@
       top      : 50%;
       right    : 40px;
       transform: translateY(-50%);
+
+      @container (width <=@phone-width) {
+        display: none;
+      }
     }
 
     >.zoom-controls {
