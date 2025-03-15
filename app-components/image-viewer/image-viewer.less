@@ -22,9 +22,17 @@
       align-items          : center;
       padding              : 16px 20px;
 
+      @container (width <=@phone-width) {
+        padding: 10px;
+      }
+
       >.button-container {
         display: flex;
         gap    : 4px;
+
+        @container (width <=@phone-width) {
+          gap: 0;
+        }
 
         >button {
           background-color: transparent;
