@@ -3,77 +3,90 @@
   width   : 0;
   height  : 0;
 
-  >header {
-    position: fixed;
-    top     : 0;
-    left    : 0;
-    right   : 0;
+  >.container {
+    >header {
+      position: fixed;
+      top     : 0;
+      left    : 0;
+      right   : 0;
 
-    display              : grid;
-    grid-template-columns: 1fr auto 1fr;
-    align-items          : center;
-    padding              : 16px 20px;
+      display              : grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items          : center;
+      padding              : 16px 20px;
 
-    >.button-container {
-      display: flex;
-      gap    : 4px;
+      >.button-container {
+        display: flex;
+        gap    : 4px;
 
-      >button {
-        background-color: transparent;
-        color           : var(--text-button-text-color);
+        >button {
+          background-color: transparent;
+          color           : var(--text-button-text-color);
 
-        @media (pointer: fine) {
-          &:hover:not(.disabled) {
+          @media (pointer: fine) {
+            &:hover:not(.disabled) {
+              background-color: var(--text-button-hover-bg-color);
+            }
+          }
+
+          &:active:not(.disabled) {
             background-color: var(--text-button-hover-bg-color);
           }
-        }
 
-        &:active:not(.disabled) {
-          background-color: var(--text-button-hover-bg-color);
+          &.disabled {
+            color: var(--text-button-disabled-text-color);
+          }
         }
+      }
 
-        &.disabled {
-          color: var(--text-button-disabled-text-color);
-        }
+      >.button-container.left {
+        justify-self: start;
+      }
+
+      >.image-counter {
+        justify-self: center;
+        font-size   : 16px;
+      }
+
+      >.button-container.right {
+        justify-self: end;
       }
     }
 
-    >.button-container.left {
-      justify-self: start;
+    >button.prev {
+      position : fixed;
+      top      : 50%;
+      left     : 40px;
+      transform: translateY(-50%);
     }
 
-    >.image-counter {
-      justify-self: center;
-      font-size: 16px;
+    >.main-image-viewer {
+      position : fixed;
+      top      : 50%;
+      left     : 50%;
+      transform: translate(-50%, -50%);
     }
 
-    >.button-container.right {
-      justify-self: end;
+    >button.next {
+      position : fixed;
+      top      : 50%;
+      right    : 40px;
+      transform: translateY(-50%);
     }
-  }
 
-  >button.prev {
-    position : fixed;
-    top      : 50%;
-    left     : 40px;
-    transform: translateY(-50%);
-  }
+    >.zoom-controls {
+      position : fixed;
+      bottom   : 120px;
+      left     : 50%;
+      transform: translateX(-50%);
+      display  : flex;
+    }
 
-  >.main-image-viewer {
-    position: fixed;
-  }
-
-  >button.next {
-    position : fixed;
-    top      : 50%;
-    right    : 40px;
-    transform: translateY(-50%);
-  }
-
-  >.thumbnail-list {
-    position: fixed;
-    bottom  : 0;
-    left    : 0;
-    right   : 0;
+    >.thumbnail-list {
+      position: fixed;
+      bottom  : 0;
+      left    : 0;
+      right   : 0;
+    }
   }
 }
