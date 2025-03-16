@@ -114,6 +114,27 @@
           transition: transform 0.2s ease-in-out;
         }
       }
+
+      >img {
+        transform : translate(-50%, -50%);
+        transition: transform 0.5s ease;
+      }
+
+      >img.enter-from-left {
+        transform: translate(-150%, -50%);
+      }
+
+      >img.enter-from-right {
+        transform: translate(50%, -50%);
+      }
+
+      >img.exit-to-left {
+        transform: translate(-150%, -50%);
+      }
+
+      >img.exit-to-right {
+        transform: translate(150%, -50%);
+      }
     }
 
     >button.next {
