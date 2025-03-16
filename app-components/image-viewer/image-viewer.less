@@ -16,6 +16,7 @@
       top     : 0;
       left    : 0;
       right   : 0;
+      z-index : 99999;
 
       display              : grid;
       grid-template-columns: 1fr auto 1fr;
@@ -84,6 +85,7 @@
       position : fixed;
       top      : 50%;
       left     : 40px;
+      z-index  : 99999;
       transform: translateY(-50%);
 
       @container (width <=@phone-width) {
@@ -102,6 +104,7 @@
       position : fixed;
       top      : 50%;
       right    : 40px;
+      z-index  : 99999;
       transform: translateY(-50%);
 
       @container (width <=@phone-width) {
@@ -113,6 +116,7 @@
       position : fixed;
       bottom   : 120px;
       left     : 50%;
+      z-index  : 99999;
       transform: translateX(-50%);
       display  : flex;
     }
@@ -122,6 +126,7 @@
       bottom  : 0;
       left    : 0;
       right   : 0;
+      z-index : 99999;
     }
   }
 }
