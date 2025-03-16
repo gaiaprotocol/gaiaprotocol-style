@@ -98,6 +98,10 @@
       top      : 50%;
       left     : 50%;
       transform: translate(-50%, -50%);
+
+      >img:not(.dragging) {
+        transition: transform 0.2s ease-in-out;
+      }
     }
 
     >button.next {
@@ -119,6 +123,7 @@
       z-index  : 99999;
       transform: translateX(-50%);
       display  : flex;
+      gap      : 8px;
     }
 
     >.thumbnail-list {
