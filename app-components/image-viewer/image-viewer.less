@@ -60,7 +60,9 @@
         justify-self: start;
 
         @container (width > @phone-width) {
-          >button.share {
+
+          >button.share,
+          >button.download {
             display: none;
           }
         }
@@ -75,7 +77,9 @@
         justify-self: end;
 
         @container (width <=@phone-width) {
-          >button.share {
+
+          >button.share,
+          >button.download {
             display: none;
           }
         }
