@@ -130,6 +130,15 @@
       }
     }
 
+    &:has(.main-image-viewer > img:only-child),
+    &:has(.main-image-viewer:empty) {
+
+      >button.prev,
+      >button.next {
+        display: none;
+      }
+    }
+
     >.zoom-controls {
       position : fixed;
       bottom   : 140px;
